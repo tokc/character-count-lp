@@ -1,7 +1,9 @@
+var Z_INDEX = "8000000000000000000000"
+
 var makeDiv = function(count) {
   var counter_div = document.createElement('div')
   counter_div.className = 'character-count-lp'
-  counter_div.style = 'background:#fff;position:fixed;right:0;top:0;'
+  counter_div.style = `background:#fff;position:fixed;right:0;top:0;z-index:${Z_INDEX}`
   counter_div.innerText = count + ' characters selected.'
 
   return counter_div
@@ -30,3 +32,4 @@ var handleEvent = function(e) {
 }
 
 document.addEventListener('mouseup', handleEvent)
+
